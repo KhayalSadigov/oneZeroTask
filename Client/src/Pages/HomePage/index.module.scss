@@ -1,0 +1,96 @@
+.home {
+  padding: 22px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    p {
+      font-family: "Arial", sans-serif;
+      font-weight: 600;
+      font-size: 1.5em;
+    }
+    .menuList {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .menuItem {
+        width: calc(100% / 5);
+        // Responsivlik üçün
+        @media (max-width: 1024px) and (min-width: 768px) {
+          width: calc(100% / 4);
+        }
+        @media (max-width: 768px) and (min-width: 545px) {
+          width: calc(100% / 3);
+        }
+        @media (max-width: 545px) and (min-width: 400px) {
+          width: calc(100% / 2);
+        }
+        @media (max-width: 400px) {
+          width: calc(100% / 1);
+        }
+        height: 170px;
+        padding: 6px;
+        padding-left: 0;
+        padding-right: 12px;
+        .content {
+          width: 100%;
+          height: 100%;
+          box-shadow: rgba(99, 99, 99, 0.355) 0px 2px 8px 0px;
+          border-radius: 8px;
+          overflow: hidden;
+          position: relative;
+          cursor: pointer;
+          &:hover{
+            .image{
+              img{
+                transform: scale(1.2);
+              }
+            }
+          }
+          .price {
+            position: absolute;
+            height: 20%;
+            width: 35%;
+            left: 8px;
+            top: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1em;
+            z-index: 99;
+          }
+          .image {
+            height: 60%;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+              transition: .3s;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          .name {
+            height: 40%;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            p {
+              font-weight: 500;
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
