@@ -12,6 +12,7 @@
 2. **FrontEnd**:
    - Məhsullar sayta daxil olduğunuz tarixə əsasən qiymətlər hesablanaraq göstərilir.
    - Açılan modalda counter qoymadım, çünki hər hansısa bir funksianallıq olmayacağı üçün vaxt itirmək istəmədim.
+   - Responsivlik daha xoş olsun deyə figmada verilən piksellər ilə deyil %,em və rem kimi vahidlərdən istifadə olunub
 
 1. **Backend**:
     - Birinci endpoint-də məhsul katalogu category-lərə əsasən qaytarılır
